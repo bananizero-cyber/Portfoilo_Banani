@@ -1,531 +1,154 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mohamed Banani - Web Developer & Fashion Designer. Building digital experiences with technical precision and creative vision.">
-    <meta name="keywords" content="Web Developer, Fashion Designer, Mohamed Banani, Portfolio, Frontend Developer, Creative Developer">
-    <meta name="author" content="Mohamed Banani">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Mohamed Banani | Web Developer × Fashion Designer">
-    <meta property="og:description" content="Building digital experiences with technical precision and creative vision">
-    <meta property="og:type" content="website">
-    
-    <title>Mohamed Banani | Web Developer × Fashion Designer</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>محمد بناني | مطور واجهات متقدم × مصمم أزياء</title>
+  <meta name="description" content="محمد بناني – مطور واجهات متقدم ومصمم أزياء بخبرة تزيد عن 20 عامًا. أبني تجارب رقمية عالية الأداء وهويات بصرية قوية. متاح للعمل عن بعد." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="محمد بناني | مطور واجهات × مصمم أزياء" />
+  <meta property="og:description" content="20+ سنة خبرة في الجمع بين الكود النظيف والإبداع البصري. فرص عن بعد متاحة الآن." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#home" class="logo">MB</a>
-                
-                <div class="nav-links">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <button class="lang-toggle" id="langToggle">عربي</button>
-                </div>
-                
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+<body class="dark">
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#skills" class="mobile-link">Skills</a>
-        <a href="#projects" class="mobile-link">Projects</a>
-        <a href="#contact" class="mobile-link">Contact</a>
-        <button class="lang-toggle-mobile" id="langToggleMobile">عربي</button>
+  <a href="#main-content" class="skip-link">الانتقال إلى المحتوى الرئيسي</a>
+
+  <header class="header" id="header">
+    <div class="container header-content">
+      <a href="#home" class="logo">MB</a>
+      <nav class="nav">
+        <a href="#about" data-en="About" data-ar="من أنا">من أنا</a>
+        <a href="#skills" data-en="Skills" data-ar="المهارات">المهارات</a>
+        <a href="#projects" data-en="Projects" data-ar="المشاريع">المشاريع</a>
+        <a href="#contact" data-en="Contact" data-ar="تواصل">تواصل</a>
+      </nav>
+      <div class="actions">
+        <button id="langToggle" class="btn-toggle" aria-label="تغيير اللغة">English</button>
+        <button id="themeToggle" class="btn-toggle" aria-label="تغيير الثيم">☀️</button>
+      </div>
+      <button id="mobileToggle" class="mobile-toggle" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-greeting fade-in-up">Hello, I'm</p>
-                    <h1 class="hero-name fade-in-up delay-1">
-                        <span class="gradient-text">Mohamed Banani</span>
-                    </h1>
-                    <p class="hero-title fade-in-up delay-2" data-en="Web Developer × Fashion Designer" data-ar="مطور ويب × مصمم أزياء">
-                        Web Developer × Fashion Designer
-                    </p>
-                    <p class="hero-description fade-in-up delay-3" data-en="Crafting digital experiences with technical precision and creative vision. I bridge the gap between code and creativity." data-ar="أصنع تجارب رقمية بدقة تقنية ورؤية إبداعية. أربط بين البرمجة والإبداع.">
-                        Crafting digital experiences with technical precision and creative vision. I bridge the gap between code and creativity.
-                    </p>
-                    <div class="hero-cta fade-in-up delay-4">
-                        <a href="#projects" class="btn btn-primary" data-en="View My Work" data-ar="شاهد أعمالي">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary" data-en="Let's Collaborate" data-ar="لنتعاون">Let's Collaborate</a>
-                    </div>
-                </div>
-                <div class="hero-image fade-in-up delay-2">
-                    <div class="profile-image-wrapper">
-                        <img src="profile.jpg" alt="Mohamed Banani" class="profile-image">
-                        <div class="profile-ring"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span></span>
-            </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="#about" data-en="About" data-ar="من أنا">من أنا</a>
+    <a href="#skills" data-en="Skills" data-ar="المهارات">المهارات</a>
+    <a href="#projects" data-en="Projects" data-ar="المشاريع">المشاريع</a>
+    <a href="#contact" data-en="Contact" data-ar="تواصل">تواصل</a>
+    <button id="langToggleMobile" class="btn-toggle">English</button>
+    <button id="themeToggleMobile" class="btn-toggle">☀️</button>
+  </div>
+
+  <main id="main-content">
+
+    <section id="home" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="greeting" data-en="Hello, I'm" data-ar="مرحبا، أنا">مرحبا، أنا</p>
+          <h1 class="name gradient-text" data-en="Mohamed Banani" data-ar="محمد بناني">محمد بناني</h1>
+          <h2 class="title" data-en="Senior Frontend Developer × Fashion Designer" data-ar="مطور واجهات أول × مصمم أزياء">مطور واجهات أول × مصمم أزياء</h2>
+          <p class="lead" data-en="Expertise in frontend, fashion design & visual creativity. Remote. Available now." data-ar="خبرة في تطوير الواجهات، تصميم الملابس والإبداع البصري. عن بعد. متاح الآن.">
+            خبرة في تطوير الواجهات، تصميم الملابس والإبداع البصري. عن بعد. متاح الآن.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn primary" data-en="View Projects" data-ar="عرض المشاريع">عرض المشاريع</a>
+            <a href="#contact" class="btn secondary" data-en="Let's Talk" data-ar="لنتحدث">لنتحدث</a>
+          </div>
         </div>
+        <div class="profile-wrapper">
+          <div class="profile-glow"></div>
+          <img src="profile.jpg" alt="محمد بناني – مطور واجهات ومصمم أزياء" class="profile-img" loading="lazy" />
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">01.</span>
-                <h2 class="section-title" data-en="About Me" data-ar="من أنا">About Me</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-image-section">
-                    <div class="about-image-wrapper">
-                        <img src="profile.jpg" alt="Mohamed Banani" class="about-image">
-                        <div class="about-image-border"></div>
-                    </div>
-                </div>
-                
-                <div class="about-text">
-                    <p class="about-intro" data-en="I'm Mohamed Banani, a creative technologist who believes exceptional digital products require both technical precision and aesthetic vision." data-ar="أنا محمد بناني، مطور ومصمم أؤمن بأن المنتجات الرقمية الاستثنائية تحتاج إلى دقة تقنية ورؤية جمالية معًا.">
-                        I'm Mohamed Banani, a creative technologist who believes exceptional digital products require both technical precision and aesthetic vision.
-                    </p>
-                    
-                    <p data-en="With expertise spanning web development and fashion design, I approach every project with a unique perspective: understanding that great user experiences are built on clean code and compelling visual narratives." data-ar="أجمع بين البرمجة وتصميم الأزياء، وأتعامل مع كل مشروع من منظور فريد: فهم أن التجارب الرقمية المتميزة تُبنى على كود نظيف وسرد بصري مقنع.">
-                        With expertise spanning web development and fashion design, I approach every project with a unique perspective: understanding that great user experiences are built on clean code and compelling visual narratives.
-                    </p>
-                    
-                    <div class="about-principles">
-                        <h3 data-en="My Work Philosophy:" data-ar="فلسفتي في العمل:">My Work Philosophy:</h3>
-                        <ul>
-                            <li data-en="Solve real problems with elegant solutions" data-ar="حل المشاكل الحقيقية بحلول أنيقة">
-                                <span class="principle-icon">→</span> Solve real problems with elegant solutions
-                            </li>
-                            <li data-en="Build with performance and beauty in mind" data-ar="البناء بعين على الأداء والجمال">
-                                <span class="principle-icon">→</span> Build with performance and beauty in mind
-                            </li>
-                            <li data-en="Create digital identities that resonate" data-ar="خلق هويات رقمية لها صدى">
-                                <span class="principle-icon">→</span> Create digital identities that resonate
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <p class="about-availability" data-en="Currently open to opportunities in web development, creative collaborations, and building brands that stand out in the digital landscape." data-ar="متاح حاليًا للفرص في تطوير المواقع، التعاون الإبداعي، وبناء علامات تجارية متميزة في المشهد الرقمي.">
-                        Currently open to opportunities in web development, creative collaborations, and building brands that stand out in the digital landscape.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 data-en="About Me" data-ar="من أنا">من أنا</h2>
+        <p data-en="Creative technologist and fashion designer with more than two decades of experience building scalable digital products and compelling visual identities." data-ar="مطور إبداعي ومصمم أزياء بخبرة تزيد عن عقدين في بناء منتجات رقمية قابلة للتوسع وهويات بصرية قوية ومؤثرة.">مطور إبداعي ومصمم أزياء بخبرة تزيد عن عقدين في بناء منتجات رقمية قابلة للتوسع وهويات بصرية قوية ومؤثرة.</p>
+        <p data-en="I specialize in high-performance frontend architecture and cross-disciplinary creative direction — always remote-ready." data-ar="أتخصص في هندسة الواجهات عالية الأداء والإدارة الإبداعية متعددة التخصصات — جاهز دائمًا للعمل عن بعد.">أتخصص في هندسة الواجهات عالية الأداء والإدارة الإبداعية متعددة التخصصات — جاهز دائمًا للعمل عن بعد.</p>
+        <a href="resume.pdf" download class="btn primary" data-en="Download Full CV" data-ar="تحميل السيرة الذاتية الكاملة">تحميل السيرة الذاتية الكاملة</a>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills section" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">02.</span>
-                <h2 class="section-title" data-en="Expertise" data-ar="الخبرات">Expertise</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="skills-grid">
-                <!-- Web Development Card -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
-                        </div>
-                        <h3 data-en="Web Development" data-ar="تطوير الويب">Web Development</h3>
-                    </div>
-                    <div class="skill-content">
-                        <div class="skill-category">
-                            <h4 data-en="Frontend Development" data-ar="تطوير الواجهات">Frontend Development</h4>
-                            <p class="tech-stack">HTML5, CSS3, JavaScript (ES6+)</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4 data-en="Modern Frameworks" data-ar="أطر العمل الحديثة">Modern Frameworks</h4>
-                            <p class="tech-stack">React, Responsive Design</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4 data-en="Performance & Optimization" data-ar="الأداء والتحسين">Performance & Optimization</h4>
-                            <p class="tech-stack">SEO, Accessibility, UX/UI</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4 data-en="Tools & Workflow" data-ar="الأدوات وسير العمل">Tools & Workflow</h4>
-                            <p class="tech-stack">Git, VS Code, Chrome DevTools</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fashion Design Card -->
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <div class="skill-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </div>
-                        <h3 data-en="Fashion Design" data-ar="تصميم الأزياء">Fashion Design</h3>
-                    </div>
-                    <div class="skill-content">
-                        <div class="skill-category">
-                            <h4 data-en="Concept Development" data-ar="تطوير المفاهيم">Concept Development</h4>
-                            <p class="tech-stack" data-en="Trend Research, Mood Boards" data-ar="بحث الاتجاهات، لوحات الإلهام">Trend Research, Mood Boards</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4 data-en="Visual Identity" data-ar="الهوية البصرية">Visual Identity</h4>
-                            <p class="tech-stack" data-en="Brand Storytelling, Styling" data-ar="سرد القصص، التنسيق">Brand Storytelling, Styling</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4 data-en="Creative Direction" data-ar="الإخراج الإبداعي">Creative Direction</h4>
-                            <p class="tech-stack" data-en="Photoshoot Direction, Lookbook" data-ar="إخراج الجلسات، كتالوجات الأزياء">Photoshoot Direction, Lookbook</p>
-                        </div>
-                        <div class="skill-category">
-                            <h4 data-en="Digital Presentation" data-ar="العرض الرقمي">Digital Presentation</h4>
-                            <p class="tech-stack" data-en="Portfolio Curation, Social Media" data-ar="تنسيق المعرض، وسائل التواصل">Portfolio Curation, Social Media</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cross-Disciplinary Skills Card -->
-                <div class="skill-card skill-card-wide">
-                    <div class="skill-header">
-                        <div class="skill-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                            </svg>
-                        </div>
-                        <h3 data-en="Cross-Disciplinary Skills" data-ar="مهارات متعددة التخصصات">Cross-Disciplinary Skills</h3>
-                    </div>
-                    <div class="skill-content skill-pills">
-                        <span class="pill" data-en="Brand Strategy" data-ar="استراتيجية العلامة التجارية">Brand Strategy</span>
-                        <span class="pill" data-en="Visual Communication" data-ar="التواصل البصري">Visual Communication</span>
-                        <span class="pill" data-en="Project Management" data-ar="إدارة المشاريع">Project Management</span>
-                        <span class="pill" data-en="Client Collaboration" data-ar="التعاون مع العملاء">Client Collaboration</span>
-                        <span class="pill" data-en="Problem Solving" data-ar="حل المشكلات">Problem Solving</span>
-                        <span class="pill" data-en="Creative Thinking" data-ar="التفكير الإبداعي">Creative Thinking</span>
-                    </div>
-                </div>
-            </div>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 data-en="Core Competencies" data-ar="الكفاءات الأساسية">الكفاءات الأساسية</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 data-en="Frontend Development" data-ar="تطوير الواجهات">تطوير الواجهات</h3>
+            <ul>
+              <li>HTML5 • CSS3 • JavaScript (ES6+)</li>
+              <li>React • Next.js • TypeScript</li>
+              <li>Tailwind CSS • Performance & Accessibility</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 data-en="Fashion & Creative Direction" data-ar="تصميم الأزياء والإدارة الإبداعية">تصميم الأزياء والإدارة الإبداعية</h3>
+            <ul>
+              <li>Brand Identity • Visual Storytelling</li>
+              <li>Concept Development • Editorial Direction</li>
+              <li>Sustainable Fashion • Digital Lookbooks</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects section" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">03.</span>
-                <h2 class="section-title" data-en="Selected Work" data-ar="أعمال مختارة">Selected Work</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <!-- Web Development Projects -->
-            <div class="projects-category">
-                <h3 class="category-title" data-en="Web Development Projects" data-ar="مشاريع تطوير الويب">Web Development Projects</h3>
-                
-                <div class="project-card">
-                    <div class="project-number">01</div>
-                    <div class="project-content">
-                        <h4 class="project-title" data-en="E-Commerce Platform" data-ar="منصة تجارة إلكترونية">E-Commerce Platform</h4>
-                        <p class="project-description" data-en="Built a responsive shopping experience with optimized checkout flow. Implemented React-based SPA architecture for seamless user navigation and fast performance." data-ar="بناء تجربة تسوق متجاوبة مع تدفق دفع محسّن. تطبيق بنية SPA قائمة على React للتنقل السلس والأداء السريع.">
-                            Built a responsive shopping experience with optimized checkout flow. Implemented React-based SPA architecture for seamless user navigation and fast performance.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">CSS Grid</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">Responsive Design</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-badge" data-en="40% faster load time" data-ar="أسرع بنسبة 40%">40% faster load time</span>
-                            <span class="result-badge" data-en="Mobile-first design" data-ar="تصميم يبدأ بالموبايل">Mobile-first design</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-number">02</div>
-                    <div class="project-content">
-                        <h4 class="project-title" data-en="Creative Agency Portfolio" data-ar="معرض أعمال وكالة إبداعية">Creative Agency Portfolio</h4>
-                        <p class="project-description" data-en="Designed and developed a high-performance portfolio website with vanilla JavaScript and advanced CSS animations. Implemented lazy loading and intersection observers for optimal performance." data-ar="تصميم وتطوير موقع معرض أعمال عالي الأداء باستخدام JavaScript الخام وحركات CSS متقدمة. تطبيق التحميل الكسول ومراقبي التقاطع للأداء الأمثل.">
-                            Designed and developed a high-performance portfolio website with vanilla JavaScript and advanced CSS animations. Implemented lazy loading and intersection observers for optimal performance.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">SCSS</span>
-                            <span class="tech-tag">Vanilla JS</span>
-                            <span class="tech-tag">Intersection Observer</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-badge" data-en="95+ Lighthouse score" data-ar="نتيجة 95+ على Lighthouse">95+ Lighthouse score</span>
-                            <span class="result-badge" data-en="Smooth animations" data-ar="حركات سلسة">Smooth animations</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-number">03</div>
-                    <div class="project-content">
-                        <h4 class="project-title" data-en="Product Launch Landing Page" data-ar="صفحة هبوط لإطلاق منتج">Product Launch Landing Page</h4>
-                        <p class="project-description" data-en="Created a conversion-focused landing page with storytelling layout and strategic CTAs. Integrated GSAP animations for engaging user experience and modern visual appeal." data-ar="إنشاء صفحة هبوط تركز على التحويل مع تخطيط سردي ودعوات للعمل استراتيجية. دمج حركات GSAP لتجربة مستخدم جذابة وجاذبية بصرية حديثة.">
-                            Created a conversion-focused landing page with storytelling layout and strategic CTAs. Integrated GSAP animations for engaging user experience and modern visual appeal.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">GSAP</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-badge" data-en="Modern design" data-ar="تصميم حديث">Modern design</span>
-                            <span class="result-badge" data-en="High conversion rate" data-ar="معدل تحويل عالٍ">High conversion rate</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fashion Design Projects -->
-            <div class="projects-category">
-                <h3 class="category-title" data-en="Fashion Design Projects" data-ar="مشاريع تصميم الأزياء">Fashion Design Projects</h3>
-                
-                <div class="project-card project-card-fashion">
-                    <div class="project-number">01</div>
-                    <div class="project-content">
-                        <h4 class="project-title" data-en='"Urban Minimalism" Collection' data-ar='مجموعة "البساطة الحضرية"'>"Urban Minimalism" Collection</h4>
-                        <p class="project-description" data-en="Contemporary streetwear collection merging clean lines with urban aesthetics. Focused on monochromatic palette and sustainable fabric choices for modern conscious consumers." data-ar="مجموعة ملابس شوارع معاصرة تدمج الخطوط النظيفة مع الجماليات الحضرية. التركيز على اللوحة الأحادية اللون وخيارات الأقمشة المستدامة للمستهلكين الواعين الحديثين.">
-                            Contemporary streetwear collection merging clean lines with urban aesthetics. Focused on monochromatic palette and sustainable fabric choices for modern conscious consumers.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag gold">Concept Design</span>
-                            <span class="tech-tag gold">Sustainable Fabrics</span>
-                            <span class="tech-tag gold">Lookbook</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-badge gold" data-en="12-piece capsule collection" data-ar="مجموعة كبسولية من 12 قطعة">12-piece capsule collection</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card project-card-fashion">
-                    <div class="project-number">02</div>
-                    <div class="project-content">
-                        <h4 class="project-title" data-en="Brand Identity Development" data-ar="تطوير هوية العلامة التجارية">Brand Identity Development</h4>
-                        <p class="project-description" data-en="Complete visual identity and styling direction for emerging fashion brand. Delivered comprehensive brand guidelines, visual storytelling framework, and campaign visuals." data-ar="هوية بصرية كاملة وتوجيه تنسيق لعلامة أزياء ناشئة. تقديم إرشادات شاملة للعلامة التجارية، إطار سرد بصري، ومرئيات الحملة.">
-                            Complete visual identity and styling direction for emerging fashion brand. Delivered comprehensive brand guidelines, visual storytelling framework, and campaign visuals.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag gold">Brand Strategy</span>
-                            <span class="tech-tag gold">Visual Identity</span>
-                            <span class="tech-tag gold">Creative Direction</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-badge gold" data-en="Complete brand guidelines" data-ar="دليل كامل للعلامة التجارية">Complete brand guidelines</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card project-card-fashion">
-                    <div class="project-number">03</div>
-                    <div class="project-content">
-                        <h4 class="project-title" data-en="Editorial Fashion Photography" data-ar="تصوير الأزياء التحريري">Editorial Fashion Photography</h4>
-                        <p class="project-description" data-en="Creative direction for editorial fashion photoshoots. Curated visual narratives combining styling, mood, and composition to create compelling fashion stories." data-ar="التوجيه الإبداعي لجلسات تصوير الأزياء التحريرية. سرد بصري منسق يجمع بين التنسيق والمزاج والتكوين لإنشاء قصص أزياء مقنعة.">
-                            Creative direction for editorial fashion photoshoots. Curated visual narratives combining styling, mood, and composition to create compelling fashion stories.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag gold">Art Direction</span>
-                            <span class="tech-tag gold">Styling</span>
-                            <span class="tech-tag gold">Visual Storytelling</span>
-                        </div>
-                        <div class="project-results">
-                            <span class="result-badge gold" data-en="Editorial portfolio" data-ar="معرض تحريري">Editorial portfolio</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 data-en="Selected Projects" data-ar="مشاريع مختارة">مشاريع مختارة</h2>
+        <p data-en="A showcase of recent work in frontend development and fashion design." data-ar="عرض لأحدث الأعمال في تطوير الواجهات وتصميم الأزياء.">عرض لأحدث الأعمال في تطوير الواجهات وتصميم الأزياء.</p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 data-en="Project 1: E-Commerce Platform" data-ar="مشروع 1: منصة تجارة إلكترونية">مشروع 1: منصة تجارة إلكترونية</h3>
+            <p data-en="Built with React and Next.js for optimal performance." data-ar="بنيت باستخدام React وNext.js لأداء مثالي.">بنيت باستخدام React وNext.js لأداء مثالي.</p>
+            <a href="https://example.com/project1" target="_blank" class="btn secondary">View Project</a>
+          </div>
+          <div class="skill-card">
+            <h3 data-en="Project 2: Fashion Collection" data-ar="مشروع 2: مجموعة أزياء">مشروع 2: مجموعة أزياء</h3>
+            <p data-en="Sustainable designs with digital lookbook." data-ar="تصاميم مستدامة مع كتيب رقمي.">تصاميم مستدامة مع كتيب رقمي.</p>
+            <a href="https://example.com/project2" target="_blank" class="btn secondary">View Project</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="experience section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">04.</span>
-                <h2 class="section-title" data-en="Experience & Achievements" data-ar="الخبرة والإنجازات">Experience & Achievements</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3 data-en="Professional Journey" data-ar="المسار المهني">Professional Journey</h3>
-                    
-                    <div class="experience-item">
-                        <div class="experience-icon">→</div>
-                        <div class="experience-details">
-                            <h4 data-en="Freelance Web Developer" data-ar="مطور ويب مستقل">Freelance Web Developer</h4>
-                            <p data-en="Building custom websites for businesses and creators with focus on performance, SEO, and user-centric design." data-ar="بناء مواقع مخصصة للشركات والمبدعين مع التركيز على الأداء وتحسين محركات البحث والتصميم المرتكز على المستخدم.">
-                                Building custom websites for businesses and creators with focus on performance, SEO, and user-centric design.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-icon">→</div>
-                        <div class="experience-details">
-                            <h4 data-en="Fashion Designer & Creative Director" data-ar="مصمم أزياء ومدير إبداعي">Fashion Designer & Creative Director</h4>
-                            <p data-en="Concept development and visual storytelling with specialization in brand identity and editorial direction." data-ar="تطوير المفاهيم والسرد البصري مع التخصص في هوية العلامة التجارية والتوجيه التحريري.">
-                                Concept development and visual storytelling with specialization in brand identity and editorial direction.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-card">
-                    <h3 data-en="Key Achievements" data-ar="الإنجازات الرئيسية">Key Achievements</h3>
-                    
-                    <ul class="achievements-list">
-                        <li data-en="Successfully delivered web projects with 100% client satisfaction" data-ar="تسليم مشاريع ويب بنجاح مع رضا عملاء بنسبة 100%">
-                            <span class="achievement-icon">✓</span>
-                            Successfully delivered web projects with 100% client satisfaction
-                        </li>
-                        <li data-en="Developed responsive websites with 90+ performance scores" data-ar="تطوير مواقع متجاوبة بدرجات أداء 90+">
-                            <span class="achievement-icon">✓</span>
-                            Developed responsive websites with 90+ performance scores
-                        </li>
-                        <li data-en="Created fashion concepts with strong visual identity" data-ar="إنشاء مفاهيم أزياء بهوية بصرية قوية">
-                            <span class="achievement-icon">✓</span>
-                            Created fashion concepts with strong visual identity
-                        </li>
-                        <li data-en="Mastered cross-industry skills in tech and creative fields" data-ar="إتقان مهارات متعددة في المجالات التقنية والإبداعية">
-                            <span class="achievement-icon">✓</span>
-                            Mastered cross-industry skills in tech and creative fields
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="experience-card">
-                    <h3 data-en="Education & Learning" data-ar="التعليم والتعلم">Education & Learning</h3>
-                    
-                    <div class="education-item">
-                        <p><strong data-en="Web Development:" data-ar="تطوير الويب:">Web Development:</strong> <span data-en="Self-taught + online certifications" data-ar="تعليم ذاتي + شهادات عبر الإنترنت">Self-taught + online certifications</span></p>
-                        <p><strong data-en="Fashion Design:" data-ar="تصميم الأزياء:">Fashion Design:</strong> <span data-en="Creative training & practical experience" data-ar="تدريب إبداعي وخبرة عملية">Creative training & practical experience</span></p>
-                        <p><strong data-en="Currently Learning:" data-ar="أتعلم حاليًا:">Currently Learning:</strong> <span data-en="Advanced React, UI/UX Design Systems" data-ar="React متقدم، أنظمة تصميم UI/UX">Advanced React, UI/UX Design Systems</span></p>
-                    </div>
-                </div>
-            </div>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 data-en="Let's Collaborate" data-ar="لنتعاون">لنتعاون</h2>
+        <p data-en="Open to remote opportunities — full-time roles, long-term contracts, freelance projects, or fashion-tech ventures." data-ar="متاح لفرص العمل عن بعد — وظائف دوام كامل، عقود طويلة، مشاريع حرة، أو تعاون في تقنية الأزياء.">متاح لفرص العمل عن بعد — وظائف دوام كامل، عقود طويلة، مشاريع حرة، أو تعاون في تقنية الأزياء.</p>
+        <a href="mailto:bananizero@gmail.com" class="email-link">bananizero@gmail.com</a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mohamedbanani" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+          <a href="https://github.com/bananizero-cyber" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+          <a href="https://x.com/BZero50052" target="_blank" rel="noopener noreferrer" title="X (Twitter)">X</a>
         </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-number">05.</span>
-                <h2 class="section-title" data-en="Let's Create Something Exceptional" data-ar="لنصنع شيئًا استثنائيًا">Let's Create Something Exceptional</h2>
-            </div>
+  </main>
 
-            <div class="contact-content">
-                <p class="contact-intro" data-en="I'm currently available for:" data-ar="أنا متاح حاليًا لـ:">I'm currently available for:</p>
-                
-                <div class="availability-list">
-                    <div class="availability-item">
-                        <span class="availability-icon">✦</span>
-                        <span data-en="Full-time opportunities in web development" data-ar="فرص دوام كامل في تطوير الويب">Full-time opportunities in web development</span>
-                    </div>
-                    <div class="availability-item">
-                        <span class="availability-icon">✦</span>
-                        <span data-en="Freelance projects (web & creative direction)" data-ar="مشاريع حرة (ويب وتوجيه إبداعي)">Freelance projects (web & creative direction)</span>
-                    </div>
-                    <div class="availability-item">
-                        <span class="availability-icon">✦</span>
-                        <span data-en="Collaborative ventures in fashion-tech" data-ar="مشاريع تعاونية في تقنية الأزياء">Collaborative ventures in fashion-tech</span>
-                    </div>
-                </div>
+  <footer class="footer">
+    <div class="container">
+      <p data-en="Designed & built by Mohamed Banani — 5+ years of precision & creativity" data-ar="صُمم وبُني بواسطة محمد بناني — أكثر من 5 سنوات من الدقة والإبداع">
+        صُمم وبُني بواسطة محمد بناني — أكثر من 5 سنوات من الدقة والإبداع
+      </p>
+      <p>© <span id="year">2026</span></p>
+    </div>
+  </footer>
 
-                <p class="contact-message" data-en="Whether you need a developer who understands design, or a creative who thinks in systems — let's talk." data-ar="سواء كنت تحتاج إلى مطور يفهم التصميم، أو مبدع يفكر بالأنظمة — لنتحدث.">
-                    Whether you need a developer who understands design, or a creative who thinks in systems — let's talk.
-                </p>
-
-                <div class="contact-email">
-                    <a href="mailto:bananizero@gmail.com" class="email-link">bananizero@gmail.com</a>
-                </div>
-
-                <!-- Social Media Links -->
-                <div class="social-links">
-                    <a href="mailto:bananizero@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer" title="Email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/mohamed-banani" class="social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/mohamedbanani" class="social-link" target="_blank" rel="noopener noreferrer" title="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/mohamedbanani" class="social-link" target="_blank" rel="noopener noreferrer" title="Twitter">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/mohamedbanani" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="contact-cta">
-                    <a href="mailto:bananizero@gmail.com" class="btn btn-primary large" data-en="Start a Project" data-ar="ابدأ مشروعًا">Start a Project</a>
-                </div>
-
-                <p class="contact-status" data-en="Available for immediate opportunities | Open to relocation | Remote-friendly" data-ar="متاح للفرص الفورية | مستعد للانتقال | عمل عن بُعد">
-                    Available for immediate opportunities | Open to relocation | Remote-friendly
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">
-                    <span data-en="Designed & Built by Mohamed Banani" data-ar="صُمم وبُني بواسطة محمد بناني">Designed & Built by Mohamed Banani</span>
-                </p>
-                
+  <script src="script.js"></script>
+</body>
+</html>
